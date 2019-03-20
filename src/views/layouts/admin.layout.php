@@ -64,19 +64,19 @@ $sbadminBundle = BootstrapSBAdmin2AssetBundle::register($this);
 
   <!-- Heading -->
   <div class="sidebar-heading">
-    管理
+    <?=Yii::t('eff-module-admin/app','Administrator');?>
   </div>
 
   <!-- Nav Item - Pages Collapse Menu -->
   <li class="nav-item">
-    <a class="nav-link" href="<?=Url::to(['/admin/user'], true);?>">
+    <a class="nav-link" href="<?=Url::to(['/admin/users/manage'], true);?>">
       <i class="fas fa-fw fa-user"></i>
-      <span>用户</span></a>
+      <span><?=Yii::t('eff-module-admin/app','Users');?></span></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="<?=Url::to(['/admin/role'], true);?>">
+    <a class="nav-link" href="<?=Url::to(['/admin/roles/manage'], true);?>">
       <i class="fas fa-fw fa-user-tag"></i>
-      <span>角色</span></a>
+      <span><?=Yii::t('eff-module-admin/app','Roles');?></span></a>
   </li>
   
   <!-- Divider -->
@@ -84,27 +84,26 @@ $sbadminBundle = BootstrapSBAdmin2AssetBundle::register($this);
 
   <!-- Heading -->
   <div class="sidebar-heading">
-    站点
+    <?=Yii::t('eff-module-admin/app','Site');?>
   </div>
 
   <!-- Nav Item - Pages Collapse Menu -->
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSitePage" aria-expanded="true" aria-controls="collapseSitePage">
-      <i class="fas fa-fw fa-file"></i>
-      <span>页面</span>
+      <i class="fas fa-fw fa-file-import"></i>
+      <span><?=Yii::t('eff-module-admin/app','Pages');?></span>
     </a>
-    <div id="collapseSitePage" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+    <div id="collapseSitePage" class="collapse">
       <div class="bg-white py-2 collapse-inner rounded">
-        <h6 class="collapse-header">快捷操作:</h6>
-        <a class="collapse-item" href="<?=Url::to(['/admin/site/page/list'], true);?>">所有页面</a>
-        <a class="collapse-item" href="<?=Url::to(['/admin/site/page/create'], true);?>">创建页面</a>
+        <a class="collapse-item" href="<?=Url::to(['/admin/site/pages/manage'], true);?>"><?=Yii::t('eff-module-admin/app','All');?></a>
+        <a class="collapse-item" href="<?=Url::to(['/admin/site/pages/create'], true);?>"><?=Yii::t('eff-module-admin/app','Create');?></a>
       </div>
     </div>
   </li>
 
   <!-- Heading -->
   <div class="sidebar-heading">
-    内容
+  <?=Yii::t('eff-module-admin/app','Content');?>
   </div>
 
   <!-- Nav Item - Pages Collapse Menu -->
@@ -112,27 +111,26 @@ $sbadminBundle = BootstrapSBAdmin2AssetBundle::register($this);
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCotentCateogry"
      aria-expanded="true" aria-controls="collapseCotentCateogry">
       <i class="fas fa-fw fa-list"></i>
-      <span>内容分类</span>
+      <span><?=Yii::t('eff-module-admin/app','Categories');?></span>
     </a>
-    <div id="collapseCotentCateogry" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+    <div id="collapseCotentCateogry" class="collapse">
       <div class="bg-white py-2 collapse-inner rounded">
-        <h6 class="collapse-header">快捷操作:</h6>
-        <a class="collapse-item" href="<?=Url::to(['/admin/content/document/list'], true);?>">所有分类</a>
-        <a class="collapse-item" href="<?=Url::to(['/admin/content/document/create'], true);?>">创建分类</a>
+        <a class="collapse-item" href="<?=Url::to(['/admin/content/categories/manage'], true);?>"><?=Yii::t('eff-module-admin/app','All');?></a>
+        <a class="collapse-item" href="<?=Url::to(['/admin/content/categories/create'], true);?>"><?=Yii::t('eff-module-admin/app','Create');?></a>
       </div>
     </div>
   </li>
   <!-- Nav Item - Pages Collapse Menu -->
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseContentPage" aria-expanded="true" aria-controls="collapseContentPage">
-      <i class="fas fa-fw fa-file"></i>
-      <span>内容页</span>
+      <i class="fas fa-fw fa-file-alt"></i>
+      <span><?=Yii::t('eff-module-admin/app','Documents');?></span>
     </a>
-    <div id="collapseContentPage" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+    <div id="collapseContentPage" class="collapse">
       <div class="bg-white py-2 collapse-inner rounded">
-        <h6 class="collapse-header">快捷操作:</h6>
-        <a class="collapse-item" href="<?=Url::to(['/admin/document/list'], true);?>">所有页面</a>
-        <a class="collapse-item" href="<?=Url::to(['/admin/document/create'], true);?>">创建页面</a>
+        <h6 class="collapse-header"><?=Yii::t('eff-module-admin/app','Shortcut:');?></h6>
+        <a class="collapse-item" href="<?=Url::to(['/admin/documents/list'], true);?>"><?=Yii::t('eff-module-admin/app','All');?></a>
+        <a class="collapse-item" href="<?=Url::to(['/admin/documents/create'], true);?>"><?=Yii::t('eff-module-admin/app','Create');?></a>
       </div>
     </div>
   </li>
