@@ -8,6 +8,7 @@ use effsoft\eff\asset\magnific\popup\MagnificPopupAssetBundle;
 use effsoft\eff\asset\chart\js\ChartJsAssetBundle;
 use effsoft\eff\theme\sbadmin2\BootstrapSBAdmin2AssetBundle;
 use effsoft\eff\theme\sbadmin2\BootstrapSBAdmin2CustomAssetBundle;
+use effsoft\eff\module\admin\widgets\SidebarWidget;
 
 FontawesomeAssetBundle::register($this);
 JqueryAssetBundle::register($this);
@@ -17,7 +18,6 @@ MagnificPopupAssetBundle::register($this);
 ChartJsAssetBundle::register($this);
 BootstrapSBAdmin2CustomAssetBundle::register($this);
 $sbadminBundle = BootstrapSBAdmin2AssetBundle::register($this);
-
 
 ?>
 <?php $this->beginPage() ?>
@@ -34,117 +34,13 @@ $sbadminBundle = BootstrapSBAdmin2AssetBundle::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
+
+
 <div id="page-top">
     <!-- Page Wrapper -->
   <div id="wrapper">
 
-<!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-  <!-- Sidebar - Brand -->
-  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?=Url::to(['/admin/dashboard'], true);?>">
-    <div class="sidebar-brand-icon rotate-n-15">
-      <i class="fas fa-laugh-wink"></i>
-    </div>
-    <div class="sidebar-brand-text mx-3"><?= Yii::t('app', 'EFF SOFT');?></div>
-  </a>
-
-  <!-- Divider -->
-  <hr class="sidebar-divider my-0">
-
-  <!-- Nav Item - Dashboard -->
-  <li class="nav-item active">
-    <a class="nav-link" href="<?=Url::to(['/admin/dashboard'], true);?>">
-      <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span><?=Yii::t('eff-module-admin/app','Dashboard');?></span></a>
-  </li>
-
-  <!-- Divider -->
-  <hr class="sidebar-divider">
-
-  <!-- Heading -->
-  <div class="sidebar-heading">
-    <?=Yii::t('eff-module-admin/app','Administrator');?>
-  </div>
-
-  <!-- Nav Item - Pages Collapse Menu -->
-  <li class="nav-item">
-    <a class="nav-link" href="<?=Url::to(['/admin/users/manage'], true);?>">
-      <i class="fas fa-fw fa-user"></i>
-      <span><?=Yii::t('eff-module-admin/app','Users');?></span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="<?=Url::to(['/admin/roles/manage'], true);?>">
-      <i class="fas fa-fw fa-user-tag"></i>
-      <span><?=Yii::t('eff-module-admin/app','Roles');?></span></a>
-  </li>
-  
-  <!-- Divider -->
-  <hr class="sidebar-divider">
-
-  <!-- Heading -->
-  <div class="sidebar-heading">
-    <?=Yii::t('eff-module-admin/app','Site');?>
-  </div>
-
-  <!-- Nav Item - Pages Collapse Menu -->
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSitePage" aria-expanded="true" aria-controls="collapseSitePage">
-      <i class="fas fa-fw fa-file-import"></i>
-      <span><?=Yii::t('eff-module-admin/app','Pages');?></span>
-    </a>
-    <div id="collapseSitePage" class="collapse">
-      <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item" href="<?=Url::to(['/admin/site/pages/manage'], true);?>"><?=Yii::t('eff-module-admin/app','All');?></a>
-        <a class="collapse-item" href="<?=Url::to(['/admin/site/pages/create'], true);?>"><?=Yii::t('eff-module-admin/app','Create');?></a>
-      </div>
-    </div>
-  </li>
-
-  <!-- Heading -->
-  <div class="sidebar-heading">
-  <?=Yii::t('eff-module-admin/app','Content');?>
-  </div>
-
-  <!-- Nav Item - Pages Collapse Menu -->
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCotentCateogry"
-     aria-expanded="true" aria-controls="collapseCotentCateogry">
-      <i class="fas fa-fw fa-list"></i>
-      <span><?=Yii::t('eff-module-admin/app','Categories');?></span>
-    </a>
-    <div id="collapseCotentCateogry" class="collapse">
-      <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item" href="<?=Url::to(['/admin/content/categories/manage'], true);?>"><?=Yii::t('eff-module-admin/app','All');?></a>
-        <a class="collapse-item" href="<?=Url::to(['/admin/content/categories/create'], true);?>"><?=Yii::t('eff-module-admin/app','Create');?></a>
-      </div>
-    </div>
-  </li>
-  <!-- Nav Item - Pages Collapse Menu -->
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseContentPage" aria-expanded="true" aria-controls="collapseContentPage">
-      <i class="fas fa-fw fa-file-alt"></i>
-      <span><?=Yii::t('eff-module-admin/app','Documents');?></span>
-    </a>
-    <div id="collapseContentPage" class="collapse">
-      <div class="bg-white py-2 collapse-inner rounded">
-        <h6 class="collapse-header"><?=Yii::t('eff-module-admin/app','Shortcut:');?></h6>
-        <a class="collapse-item" href="<?=Url::to(['/admin/documents/list'], true);?>"><?=Yii::t('eff-module-admin/app','All');?></a>
-        <a class="collapse-item" href="<?=Url::to(['/admin/documents/create'], true);?>"><?=Yii::t('eff-module-admin/app','Create');?></a>
-      </div>
-    </div>
-  </li>
-
-  <!-- Divider -->
-  <hr class="sidebar-divider d-none d-md-block">
-
-  <!-- Sidebar Toggler (Sidebar) -->
-  <div class="text-center d-none d-md-inline">
-    <button class="rounded-circle border-0" id="sidebarToggle"></button>
-  </div>
-
-</ul>
-<!-- End of Sidebar -->
+    <?=SidebarWidget::widget();?>
 
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
