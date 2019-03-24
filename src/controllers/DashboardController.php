@@ -25,6 +25,6 @@ class DashboardController extends EffController{
 
     function actionIndex(){
         
-        return $this->render('//admin/dashboard/index', []);
+        return $this->render('index', []);
     }
 }

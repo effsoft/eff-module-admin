@@ -19,27 +19,46 @@
   <li class="nav-item active">
     <a class="nav-link" href="<?=Url::to(['/admin/dashboard'], true);?>">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span><?=Yii::t('eff-module-admin/app','Dashboard');?></span></a>
+      <span><?=Yii::t('admin/app','Dashboard');?></span></a>
   </li>
 
   <!-- Divider -->
   <hr class="sidebar-divider">
 
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        <?=Yii::t('admin/app','Site');?>
+    </div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSitePage" aria-expanded="true" aria-controls="collapseSitePage">
+            <i class="fas fa-fw fa-file-import"></i>
+            <span><?=Yii::t('admin/app','Page');?></span>
+        </a>
+        <div id="collapseSitePage" class="collapse">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="<?=Url::to(['/site/admin/page/manage'], true);?>"><?=Yii::t('admin/app','All');?></a>
+                <a class="collapse-item" href="<?=Url::to(['/site/admin/page/create'], true);?>"><?=Yii::t('admin/app','Create');?></a>
+            </div>
+        </div>
+    </li>
+
   <!-- Heading -->
   <div class="sidebar-heading">
-    <?=Yii::t('eff-module-admin/app','Administrator');?>
+    <?=Yii::t('admin/app','Administrator');?>
   </div>
 
   <!-- Nav Item - Pages Collapse Menu -->
   <li class="nav-item">
     <a class="nav-link" href="<?=Url::to(['/user/admin/manage'], true);?>">
       <i class="fas fa-fw fa-user"></i>
-      <span><?=Yii::t('eff-module-admin/app','User');?></span></a>
+      <span><?=Yii::t('admin/app','User');?></span></a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="<?=Url::to(['/role/admin/manage'], true);?>">
       <i class="fas fa-fw fa-user-tag"></i>
-      <span><?=Yii::t('eff-module-admin/app','Role');?></span></a>
+      <span><?=Yii::t('admin/app','Role');?></span></a>
   </li>
   
   <!-- Divider -->
@@ -47,26 +66,7 @@
 
   <!-- Heading -->
   <div class="sidebar-heading">
-    <?=Yii::t('eff-module-admin/app','Site');?>
-  </div>
-
-  <!-- Nav Item - Pages Collapse Menu -->
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSitePage" aria-expanded="true" aria-controls="collapseSitePage">
-      <i class="fas fa-fw fa-file-import"></i>
-      <span><?=Yii::t('eff-module-admin/app','Page');?></span>
-    </a>
-    <div id="collapseSitePage" class="collapse">
-      <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item" href="<?=Url::to(['/site/admin/page/manage'], true);?>"><?=Yii::t('eff-module-admin/app','All');?></a>
-        <a class="collapse-item" href="<?=Url::to(['/site/admin/page/create'], true);?>"><?=Yii::t('eff-module-admin/app','Create');?></a>
-      </div>
-    </div>
-  </li>
-
-  <!-- Heading -->
-  <div class="sidebar-heading">
-  <?=Yii::t('eff-module-admin/app','Content');?>
+  <?=Yii::t('admin/app','Content');?>
   </div>
 
   <!-- Nav Item - Pages Collapse Menu -->
@@ -74,12 +74,12 @@
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCotentCateogry"
      aria-expanded="true" aria-controls="collapseCotentCateogry">
       <i class="fas fa-fw fa-list"></i>
-      <span><?=Yii::t('eff-module-admin/app','Category');?></span>
+      <span><?=Yii::t('admin/app','Category');?></span>
     </a>
     <div id="collapseCotentCateogry" class="collapse">
       <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item" href="<?=Url::to(['/content/admin/category/manage'], true);?>"><?=Yii::t('eff-module-admin/app','All');?></a>
-        <a class="collapse-item" href="<?=Url::to(['/content/admin/category/create'], true);?>"><?=Yii::t('eff-module-admin/app','Create');?></a>
+        <a class="collapse-item" href="<?=Url::to(['/content/admin/category/manage'], true);?>"><?=Yii::t('admin/app','All');?></a>
+        <a class="collapse-item" href="<?=Url::to(['/content/admin/category/create'], true);?>"><?=Yii::t('admin/app','Create');?></a>
       </div>
     </div>
   </li>
@@ -87,13 +87,13 @@
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseContentPage" aria-expanded="true" aria-controls="collapseContentPage">
       <i class="fas fa-fw fa-file-alt"></i>
-      <span><?=Yii::t('eff-module-admin/app','Document');?></span>
+      <span><?=Yii::t('admin/app','Document');?></span>
     </a>
     <div id="collapseContentPage" class="collapse">
       <div class="bg-white py-2 collapse-inner rounded">
-        <h6 class="collapse-header"><?=Yii::t('eff-module-admin/app','Shortcut:');?></h6>
-        <a class="collapse-item" href="<?=Url::to(['/content/admin/document/list'], true);?>"><?=Yii::t('eff-module-admin/app','All');?></a>
-        <a class="collapse-item" href="<?=Url::to(['/content/admin/document/create'], true);?>"><?=Yii::t('eff-module-admin/app','Create');?></a>
+        <h6 class="collapse-header"><?=Yii::t('admin/app','Shortcut:');?></h6>
+        <a class="collapse-item" href="<?=Url::to(['/content/admin/document/list'], true);?>"><?=Yii::t('admin/app','All');?></a>
+        <a class="collapse-item" href="<?=Url::to(['/content/admin/document/create'], true);?>"><?=Yii::t('admin/app','Create');?></a>
       </div>
     </div>
   </li>
