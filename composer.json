@@ -37,34 +37,7 @@
     }
   },
   "repositories": {
-    "eff-asset-tinymce":{
-      "type": "path",
-      "url": "../eff-asset-tinymce"
-    },
-    "eff-asset-chart-js":{
-      "type": "path",
-      "url": "../eff-asset-chart-js"
-    },
-    "eff-asset-fontawesome":{
-      "type": "path",
-      "url": "../eff-asset-fontawesome"
-    },
-    "eff-asset-jquery":{
-      "type": "path",
-      "url": "../eff-asset-jquery"
-    },
-    "eff-asset-magnific-popup":{
-      "type": "path",
-      "url": "../eff-asset-magnific-popup"
-    },
-    "eff-asset-jquery-easing":{
-      "type": "path",
-      "url": "../eff-asset-jquery-easing"
-    },
-    "eff-asset-bootstrap-bundle":{
-      "type": "path",
-      "url": "../eff-asset-bootstrap-bundle"
-    },
+    
     "eff-module-verify":{
       "type": "path",
       "url": "../eff-module-verify"
